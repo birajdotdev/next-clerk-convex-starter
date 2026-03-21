@@ -1,5 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { Skeleton } from "@/components/ui/skeleton";
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { Authenticated, AuthLoading, Unauthenticated } from "convex/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,17 +22,24 @@ export function Header() {
           <span className="font-semibold">Next Clerk Convex Starter</span>
         </Link>
         <div className="flex items-center gap-x-4">
-          <Show when="signed-out">
+          <Unauthenticated>
             <SignInButton>
               <Button variant="ghost">Sign in</Button>
             </SignInButton>
             <SignUpButton>
               <Button>Sign up</Button>
             </SignUpButton>
-          </Show>
-          <Show when="signed-in">
-            <UserButton />
-          </Show>
+          </Unauthenticated>
+          <AuthLoading>
+            <Skeleton className="aspect-square size-8 rounded-full" />
+          </AuthLoading>
+          <Authenticated>
+            <UserButton
+              fallback={
+                <Skeleton className="aspect-square size-8 rounded-full" />
+              }
+            />
+          </Authenticated>
         </div>
       </nav>
     </header>

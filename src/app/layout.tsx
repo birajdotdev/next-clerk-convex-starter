@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@/components/clerk-provider";
+import ConvexClientProvider from "@/components/convex-client-provider";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -47,12 +48,14 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col">
         <ClerkProvider>
-          <ThemeProvider>
-            <TooltipProvider>
-              <Header />
-              {children}
-            </TooltipProvider>
-          </ThemeProvider>{" "}
+          <ConvexClientProvider>
+            <ThemeProvider>
+              <TooltipProvider>
+                <Header />
+                {children}
+              </TooltipProvider>
+            </ThemeProvider>
+          </ConvexClientProvider>
         </ClerkProvider>
       </body>
     </html>
