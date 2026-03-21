@@ -52,23 +52,23 @@ import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import {
-  CopyIcon,
-  CircleAlertIcon,
-  TrashIcon,
-  ShareIcon,
-  ShoppingBagIcon,
-  MoreHorizontalIcon,
-  Loader2Icon,
-  PlusIcon,
-  MinusIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
   CheckIcon,
   ChevronDownIcon,
   ChevronRightIcon,
+  ChevronUpIcon,
+  CircleAlertIcon,
+  CopyIcon,
+  Loader2Icon,
+  MinusIcon,
+  MoreHorizontalIcon,
+  PlusIcon,
   SearchIcon,
   SettingsIcon,
-  ChevronUpIcon,
+  ShareIcon,
+  ShoppingBagIcon,
+  TrashIcon,
 } from "lucide-react";
 
 export function Demo() {
@@ -85,7 +85,7 @@ export function Demo() {
   );
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center bg-muted p-4 sm:p-6 lg:p-12 dark:bg-background">
+    <div className="flex w-full flex-1 flex-col items-center justify-center bg-muted p-4 sm:p-6 lg:p-12 dark:bg-background">
       <div className="grid max-w-3xl gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-4">
           <Card>
