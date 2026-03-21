@@ -1,0 +1,21 @@
+{
+  "guidelinesHash": "deca8f973b701e27f65ab9d2b189201fcbcefcf524e9bc44c413ab3109e35993",
+  "agentsMdSectionHash": "2e7c4225c2fe4c71cd39b83389288e622de3269593294a9fc667cfd2853b237e",
+  "claudeMdHash": "2e7c4225c2fe4c71cd39b83389288e622de3269593294a9fc667cfd2853b237e",
+  "agentSkillsSha": "cd697e02ca46ccbc445418785e03ad87a35617c9",
+  "installedSkillNames": [
+    "convex-setup-auth",
+    "vercel-composition-patterns",
+    "convex-create-component",
+    "next-browser",
+    "next-upgrade",
+    "shadcn",
+    "next-best-practices",
+    "convex-quickstart",
+    "web-design-guidelines",
+    "convex-migration-helper",
+    "vercel-react-best-practices",
+    "convex-performance-audit",
+    "next-cache-components"
+  ]
+}

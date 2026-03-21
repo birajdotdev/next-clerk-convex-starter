@@ -1,11 +1,13 @@
-import { defineConfig, globalIgnores } from "eslint/config";
+import convexPlugin from "@convex-dev/eslint-plugin";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
 import prettier from "eslint-config-prettier/flat";
+import { defineConfig, globalIgnores } from "eslint/config";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  ...convexPlugin.configs.recommended,
   prettier,
   // Override default ignores of eslint-config-next.
   globalIgnores([
@@ -14,7 +16,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    ".agents/**"
+    ".agents/**",
+    "src/convex/_generated/**",
   ]),
 ]);
 
