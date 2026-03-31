@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev": "bun --parallel dev:frontend dev:backend",
     "dev:frontend": "bun --bun next dev",
     "dev:backend": "bun --bun convex dev",
     "predev": "bun --bun convex dev --until-success && bun --bun convex dashboard",
@@ -50,7 +50,6 @@
     "eslint": "^9.39.4",
     "eslint-config-next": "16.2.1",
     "eslint-config-prettier": "^10.1.8",
-    "npm-run-all2": "^8.0.4",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4.2.2",

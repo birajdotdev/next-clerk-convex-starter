@@ -14,6 +14,10 @@ export function ClerkProvider({
       ui={ui}
       appearance={{
         theme: shadcn,
+        options: {
+          logoImageUrl: "/convex.svg",
+          socialButtonsPlacement: "bottom",
+        },
         ...appearance,
       }}
       {...props}
